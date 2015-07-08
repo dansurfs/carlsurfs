@@ -1,6 +1,5 @@
 var hooks = {
 	onError: function(formType, error) {
-		console.log("meh");
 	},
 	onSuccess: function(formType, result){
 		var uploads = Session.get("uploaded");
@@ -13,7 +12,8 @@ var hooks = {
 			Boards.update({_id: result}, {$set: {images: urls } });
 		}
 
-		console.log(urls);
+		Session.set("uploaded", []);
+
 	}
 }
 
