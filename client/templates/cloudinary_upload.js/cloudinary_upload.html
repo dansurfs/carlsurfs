@@ -1,17 +1,17 @@
 <template name="cloudinaryUpload">
-		
-<div class="row">
-	<div class="col-sm-12">
-		{{#each uploads}}
-		<img style="width: 25%" src="{{url}}" alt="">
-		{{/each}}
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			{{#each uploads}}
+			<img style="width: 25%" src="{{url}}" alt="">
+			{{/each}}
+		</div>
 	</div>
-</div>
 
-<div style="margin-bottom: 10px" class="row">
-	<div class="col-sm-12">
-		<a href="#" id="upload_widget_opener">Add Images</a>
+	<div style="margin-bottom: 10px" class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<a href="#" class="center-text" id="upload_widget_opener">Add Images</a>
+		</div>
 	</div>
-</div>
-
+</div>	
 </template>
