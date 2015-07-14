@@ -1,14 +1,24 @@
 <template name="boardList">
-	<h1>Boards</h1>
-	{{#each boards}}
-		<div class="row board-container">
-			<div class="col-sm-12">
-				<h3>{{brandName}}, <i>{{modelName}}</i></h3>
-				<p>
-					<b>Dimensions: </b>{{height}} x {{width}} x {{thickness}}
-					<b>Price: </b>{{askingPrice}}
-				</p>
-			</div>
-		</div>
-	{{/each}}	
+	<h1 class="title">Surfboards for Sale</h1>
+	<h4 class="text-center">No Sign Up Required To Post A Board</h4>
+	{{#esEach index="boards"}}
+		{{>boardRow}}
+		{{> esLoadMoreButton index="players"}}
+	{{/esEach}}
+
+	{{#ifEsHasNoResults index="boards"}}
+		<h3 class="text-center">Nothing found.</h3> 
+	{{/ifEsHasNoResults}}
+
+	{{#ifEsInputIsEmpty index="boards"}}
+    {{#each boards}}
+			{{>boardRow}}
+    {{/each}}
+	{{/ifEsInputIsEmpty}}
+
+
+	{{#ifEsIsSearching index="boards"}}
+		<div class="center-text">Loading...</div>
+	{{/ifEsIsSearching}}
+
 </template>

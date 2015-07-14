@@ -1,7 +1,7 @@
 <template name="viewBoardPage">
 	{{>boardImages}}
 	<div class="row">
-		<div style="border: 1px solid #ddd; border-radius: 5px" class="col-md-6 col-md-offset-3">
+		<div style="border: 1px solid #ddd; border-radius: 5px" class="z2 col-md-6 col-md-offset-3">
 			<h2>Details</h2>
 			<p><b>Brand:</b> {{brandName}}</p>
 			<p><b>Model:</b> {{modelName}}</p>
@@ -15,4 +15,13 @@
 			<p><b>Phone:</b> {{phone}}</p>
 		</div>
 	</div>
+	{{#if messageSent}}
+	<div class="row contact-seller" style="margin-top: 20px">
+		<div style="padding-top: 20px; padding-bottom: 20px; border: 1px solid #ddd; border-radius: 5px" class="z2 col-md-6 col-md-offset-3">
+			<h4 class="text-center">Your message has been sent</h4>
+		</div>
+	</div>
+	{{else}}
+		{{>contactSeller}}
+	{{/if}}
 </template>

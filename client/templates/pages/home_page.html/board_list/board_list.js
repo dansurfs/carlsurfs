@@ -9,3 +9,5 @@ Template.boardList.events({
 		Router.go('board.view', {_id: this._id});
 	}
 });
+
+
