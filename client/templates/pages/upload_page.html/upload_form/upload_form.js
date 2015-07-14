@@ -6,6 +6,7 @@ Template.uploadForm.events({
 		doc.brandName = t.$('[name=brandName]').val()
 		doc.modelName =	t.$('[name=modelName]').val()
 	  doc.height = t.$('[name=height]').val()
+	 	doc.width = t.$('[name=width]').val()
 	  doc.thickness = t.$('[name=thickness]').val()
 	  doc.boardType = t.$('[name=boardType]').val()
 	  doc.tailType = t.$('[name=tailType]').val()

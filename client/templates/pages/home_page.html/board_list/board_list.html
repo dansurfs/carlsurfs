@@ -1,0 +1,14 @@
+<template name="boardList">
+	<h1>Boards</h1>
+	{{#each boards}}
+		<div class="row board-container">
+			<div class="col-sm-12">
+				<h3>{{brandName}}, <i>{{modelName}}</i></h3>
+				<p>
+					<b>Dimensions: </b>{{height}} x {{width}} x {{thickness}}
+					<b>Price: </b>{{askingPrice}}
+				</p>
+			</div>
+		</div>
+	{{/each}}	
+</template>

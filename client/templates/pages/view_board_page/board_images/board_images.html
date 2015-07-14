@@ -1,0 +1,14 @@
+<template name="boardImages">
+<div class="row">
+	<div class="col-md-12">
+		<div id="carousel">
+			{{#each urls}}
+		    <div style="outline: none; border: none;">
+		      <img style="outline: none; border: none;" src="{{this.url}}">
+		    </div>
+		 	{{/each}}
+		</div>
+	</div>
+</div>
+</template>
+

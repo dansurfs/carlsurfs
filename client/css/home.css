@@ -1,0 +1,14 @@
+.board-container {
+	background-color: lightgrey;
+	border-radius: 8px;
+	margin-top: 8px;
+	cursor: pointer;
+}
+
+.board-container:hover{
+	background-color: #ddd;
+}
+
+.board-container h3 {
+	margin-top: 10px;
+}
